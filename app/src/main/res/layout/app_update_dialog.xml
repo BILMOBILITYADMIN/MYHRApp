@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/my_primary"
+    >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App update available"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:textSize="@dimen/text_size_16"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/dialog_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title"
+        android:text="There is a newer version available\nPlease update"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/confirm_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        android:padding="2dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dialog_confirmation"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- For settings framework -->
+    <color name="caldroid_darker_gray">#aaa</color>
+    <!-- A light Holo shade of blue -->
+    <!-- A dark Holo shade of blue -->
+    <!-- A really bright Holo shade of blue -->
+
+</resources>

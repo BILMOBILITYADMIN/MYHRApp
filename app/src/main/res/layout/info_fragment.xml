@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/my_primary_light"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_primary_light"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/personal_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/my_primary_light"
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel_personalinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_color">
+
+                    <TextView
+                        android:id="@+id/personal_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Basic info"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/personal_edit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/personal_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:src="@mipmap/edit_purple" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/personal_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rel_personalinfo"
+                    android:background="@color/black"
+                    android:padding="10dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/person_info_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personal_border"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/my_primary_light"
+                    android:layout_marginTop="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/experience_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/my_primary_light"
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/my_primary_light"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_color"
+                    >
+
+                    <TextView
+                        android:id="@+id/experience_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Official info"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/no_experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:text=""
+                        android:textColor="@color/my_primary" />
+
+
+
+                    <ImageView
+                        android:id="@+id/experience_edit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/experience_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:src="@mipmap/edit_purple" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/experience_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rel_exp"
+                    android:background="@color/black"
+                    android:padding="10dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/experience_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/experience_border"
+                    android:background="@color/my_primary_light"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/line_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/experience_list"
+                    android:background="@color/black"
+                    android:visibility="gone"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:src="@mipmap/add_purple" />
+
+                <TextView
+                    android:id="@+id/add_exp_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_alignTop="@+id/add"
+                    android:layout_toRightOf="@+id/add"
+                    android:visibility="gone"
+                    android:text="ADD EXPERIENCE"
+                    android:textColor="@color/my_primary" />
+
+                <TextView
+                    android:id="@+id/add_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_exp"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="ADD EXPERIENCE"
+                    android:visibility="gone"
+                    android:textColor="@color/my_primary" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/certification_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/my_primary_light"
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel_cert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cert_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="CERTIFICATIONS"
+                        android:textColor="@color/my_primary" />
+
+                    <TextView
+                        android:id="@+id/no_certifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:text="NO CERTIFICATIONS ADDED"
+                        android:textColor="@color/my_primary" />
+
+
+                    <ImageView
+                        android:id="@+id/cert_edit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/cert_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/edit_purple" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/cert_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rel_cert"
+                    android:background="#E7E7E7"
+                    android:padding="10dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/certification_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cert_border"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/line_cert"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/certification_list"
+                    android:background="#E7E7E7"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/addImage_cert"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:src="@mipmap/add_purple" />
+
+                <TextView
+                    android:id="@+id/add_cert_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_alignTop="@+id/addImage_cert"
+                    android:layout_toRightOf="@+id/addImage_cert"
+                    android:visibility="gone"
+                    android:text="ADD CERTIFICATION"
+                    android:textColor="@color/my_primary" />
+
+                <TextView
+                    android:id="@+id/add_cert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_cert"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="ADD CERTIFICATION"
+                    android:textColor="@color/my_primary" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

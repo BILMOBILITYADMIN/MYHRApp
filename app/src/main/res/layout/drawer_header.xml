@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:fitsSystemWindows="true"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    <ImageView
+        android:id="@+id/backgroundimage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:src="@mipmap/incture_settings_img_gradient"
+        android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <Utility.ProfileImageView
+        android:id="@+id/drawer_header_profile_pic"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_above="@+id/drawer_header_profile_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/defaultround"
+         />
+
+    <TextView
+        android:id="@+id/drawer_header_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/drawer_header_profile_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Sam Welch"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/drawer_header_profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tv_version"
+        android:layout_marginLeft="16dp"
+        android:text="sam.welch@cherrywork.net"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Version 1.0"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="@color/black"
+        android:background="@mipmap/icon_back_red" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/back"
+        android:visibility="gone"
+        android:background="@mipmap/ic_action_settings" />
+
+</RelativeLayout>

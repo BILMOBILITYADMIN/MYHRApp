@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_accent"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dadada"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#dadada">
+
+                <Utility.NestedListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:background="@color/my_accent"
+                    android:divider="@null"
+                    android:scrollbars="none"></Utility.NestedListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/list"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/leave_history"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/image1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image1">
+
+                                <TextView
+                                    android:id="@+id/label1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leave History"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label1"
+                                    android:layout_below="@+id/label1"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label1"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label2"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/srh"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image2">
+
+                                <TextView
+                                    android:id="@+id/label4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Salary Revision History"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label4"
+                                    android:layout_below="@+id/label4"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label4"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label5"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/payroll_history"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image3">
+
+                                <TextView
+                                    android:id="@+id/label7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Payroll History"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label7"
+                                    android:layout_below="@+id/label7"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label7"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label8"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/reimb_history"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image4">
+
+                                <TextView
+                                    android:id="@+id/label10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reimbursement History"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label10"
+                                    android:layout_below="@+id/label10"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label10"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label11"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image5"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/leave_report"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image5">
+
+                                <TextView
+                                    android:id="@+id/label13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leave Report"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label13"
+                                    android:layout_below="@+id/label13"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label13"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label14"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image6"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/attri_analysis"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image6">
+
+                                <TextView
+                                    android:id="@+id/label16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Attrition Analysis"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label16"
+                                    android:layout_below="@+id/label16"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label16"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label17"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image7"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/demographics"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image7">
+
+                                <TextView
+                                    android:id="@+id/label19"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Demographics"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label19"
+                                    android:layout_below="@+id/label19"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label19"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label20"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image8"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/comp_analysis"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image8">
+
+                                <TextView
+                                    android:id="@+id/label22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Competency Analysis"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label22"
+                                    android:layout_below="@+id/label22"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label22"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label23"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image9"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/srh"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image9">
+
+                                <TextView
+                                    android:id="@+id/label25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Remuneration Analysis"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label25"
+                                    android:layout_below="@+id/label25"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label25"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label26"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/organis_history"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image10">
+
+                                <TextView
+                                    android:id="@+id/label28"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Organization History"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label29"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label28"
+                                    android:layout_below="@+id/label28"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label28"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label29"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@mipmap/opa"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/image11">
+
+                                <TextView
+                                    android:id="@+id/label31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open Position Analysis"
+                                    android:textStyle="bold"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/label31"
+                                    android:layout_below="@+id/label31"
+                                    android:text="Last Updated On -"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/label33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/label31"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_toRightOf="@+id/label32"
+                                    android:text=" Oct 30"
+                                    android:textSize="10dp"></TextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Reports"
+        android:textColor="@color/black"
+        />
+</RelativeLayout>

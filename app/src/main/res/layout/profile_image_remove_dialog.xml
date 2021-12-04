@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/my_primary">
+
+
+    <TextView
+        android:id="@+id/confirm_removal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to remove the Profile Image ?"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/confirm_removal"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@+id/yes"
+        android:layout_below="@+id/confirm_removal"
+        android:layout_alignTop="@+id/yes"
+        android:layout_marginRight="15dp"
+        android:padding="2dp"
+        android:layout_marginBottom="10dp"
+        />
+
+</RelativeLayout>

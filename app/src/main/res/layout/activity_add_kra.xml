@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/my_primary">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@mipmap/ic_arrow_back_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="56dp"
+            android:gravity="center_vertical"
+            android:text="Add KRA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.example.arun.demo.AddKraActivity">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilGoalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/etGoalName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="Goal Name"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorPrimary" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilWeightage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/etWeightage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="Weightage (%)"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvKeyDeliverables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Key Deliverables"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp">
+
+                <TableRow android:weightSum="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilKeyDeliverables"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.9"
+                        android:theme="@style/TextLabel"
+                        >
+
+                        <EditText
+                            android:id="@+id/etKeyDeliverables"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:hint="Key Deliverables"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/hint_text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAddKD"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.1"
+                        android:src="@mipmap/add_purple"
+                        android:tint="@color/Likeusername_text_color" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr1"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilKeyDeliverables1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:theme="@style/TextLabel"
+                        >
+
+                        <EditText
+                            android:id="@+id/etKeyDeliverables1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:hint="Key Deliverables"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/hint_text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDelete1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:src="@mipmap/ic_action_del"
+                        android:tint="@color/Likeusername_text_color" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr2"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilKeyDeliverables2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:theme="@style/TextLabel"
+                        >
+
+                        <EditText
+                            android:id="@+id/etKeyDeliverables2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:hint="Key Deliverables"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/hint_text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDelete2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:src="@mipmap/ic_action_del"
+                        android:tint="@color/Likeusername_text_color" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr3"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilKeyDeliverables3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:theme="@style/TextLabel"
+                        >
+
+                        <EditText
+                            android:id="@+id/etKeyDeliverables3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:hint="Key Deliverables"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/hint_text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDelete3"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:src="@mipmap/ic_action_del"
+                        android:tint="@color/Likeusername_text_color" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvAchievementMetrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Achievement Metrics"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilLow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/etLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="Low"
+                    android:inputType="textImeMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilFullAchievement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/etFullAchievement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="100% Achievement"
+                    android:inputType="textImeMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilHigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/etHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="High"
+                    android:inputType="textImeMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_text" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/my_primary"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bCancel" />
+
+        <Button
+            android:id="@+id/bCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/my_primary"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/bSave"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+</LinearLayout>
+

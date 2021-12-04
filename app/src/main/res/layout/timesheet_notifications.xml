@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/nonotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="no notifications"/>
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/my_primary">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:tint="@color/white"
+            android:src="@mipmap/icon_back_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back"
+            android:layout_centerInParent="true"
+            android:text="Notifications"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/notificationlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_below="@+id/actionbar"
+        ></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/actionbar">
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:src="@mipmap/timesheetapproved" />
+
+        <TextView
+            android:id="@+id/timesheetstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/status"
+            android:text="Your Timesheet has been Accepted"
+            android:textColor="@color/action_item_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timesheetweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timesheetstatus"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/status"
+            android:text="Week: 8 Mar - 13 Mar"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timesheettext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timesheetweek"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/status"
+            android:text="Ravikiran commented on the timesheet for the details"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/timesheettext"
+            android:layout_marginTop="10dp"
+            android:background="@color/action_item_text_color"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

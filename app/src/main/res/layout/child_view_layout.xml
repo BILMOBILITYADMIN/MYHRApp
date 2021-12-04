@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/key_deliv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KEY DELIVERABLES"
+        android:textColor="@color/my_primary"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/key_deliv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/key_deliv_title"
+        android:text="key deliverables value"
+        android:textColor="@color/my_primary_text"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@+id/key_deliv_title"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_color"
+        android:layout_below="@+id/key_deliv_value"
+        android:layout_alignLeft="@+id/key_deliv_title"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/achievement_metrics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:text="ACHIEVEMENT METRICS"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:textColor="@color/my_primary"
+        />
+
+    <LinearLayout
+        android:id="@+id/achievement_metrics_values_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/achievement_metrics_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:background="@drawable/linearlayout_border"
+        android:layout_below="@+id/achievement_metrics_title">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Low"
+                android:textColor="@color/my_primary_text"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/low_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/low"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Lowhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                android:textColor="@color/my_primary_text"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/achievement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="100% Achievement"
+                android:textColor="@color/my_primary_text"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/achievement_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/achievement"
+                android:gravity="left"
+                android:text="jfefsdjkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjfs"
+                android:textColor="@color/my_primary_text"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="High"
+                android:textColor="@color/my_primary_text"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/high_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/high"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="highhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                android:textColor="@color/my_primary_text"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

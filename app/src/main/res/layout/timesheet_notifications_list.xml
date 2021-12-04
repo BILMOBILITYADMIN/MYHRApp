@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary_light"
+    >
+
+    <RelativeLayout
+        android:id="@+id/notification_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:background="@color/approval_card_backgroundcolor"
+        >
+
+        <Utility.CircleImageView
+            android:id="@+id/status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:src="@mipmap/timesheetapproved" />
+
+        <TextView
+            android:id="@+id/timesheetstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/status"
+            android:text="Approve appraisal for"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/timesheetstatus"
+            android:text="deeksha shetty"
+            android:layout_alignTop="@+id/timesheetstatus"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/timesheetweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timesheetstatus"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/status"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/notification_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timesheetweek"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/status"
+            android:text="20 May"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12"
+            />
+
+        <TextView
+            android:id="@+id/timesheettext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timesheetweek"
+            android:visibility="gone"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/status"
+            android:text="Ravikiran commented on the timesheet for the details"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/notification_background"
+        android:layout_marginTop="2dp"
+        android:background="@color/action_item_text_color"
+        />
+
+</RelativeLayout>
